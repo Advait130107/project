@@ -69,7 +69,12 @@ body {
   border-radius: 6px;
   cursor: pointer;
 }
-
+#taskList {
+  list-style: none;
+  padding: 40px;
+  font-size: large;
+  align-items: center;
+}
 .task {
   background: white;
   padding: 15px;
@@ -110,15 +115,23 @@ body {
   font-weight: bold;
   color: #007bff;
 }
-.deleteTask button,
-.completeTask button {
+.deleteTask {
+  padding: 8px 12px;
   border: none;
-  padding: 10px 16px;
+  margin-left: 595px;
+  background: #dc3545;
+  color: white;
   border-radius: 6px;
   cursor: pointer;
-  background-color: rgb(0, 123, 255);
 }
-
+.completeTask {
+  padding: 8px 12px;
+  border: none;
+  background: #28a745;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
 @media (max-width: 600px) {
   .task-input-section {
     flex-direction: column;

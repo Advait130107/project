@@ -24,17 +24,15 @@ function addTask() {
 
   li.innerHTML = `
     ${taskText}
-    <button onclick="deleteTask(this)">
+    <button onclick="deleteTask(this)" class="deleteTask">
       Delete
     </button>
-    <button onclick="completeTask(this)">
+    <button onclick="completeTask(this) " class="completeTask">
       Complete
     </button>
   `;
 
   document.getElementById("taskList").appendChild(li);
-
-  taskInput.value = "";
 }
 
 function deleteTask(button) {
