@@ -89,6 +89,28 @@ body {
 .task-buttons {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.deleteTask,
+.completeTask {
+  padding: 8px 12px;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.deleteTask {
+  background: #dc3545;
+  margin-bottom: 10px;
+  margin-left: 500px;
+}
+
+.completeTask {
+  background: #28a745;
+  margin-bottom: 10px;
 }
 
 .stats-section {
@@ -115,23 +137,7 @@ body {
   font-weight: bold;
   color: #007bff;
 }
-.deleteTask {
-  padding: 8px 12px;
-  border: none;
-  margin-left: 595px;
-  background: #dc3545;
-  color: white;
-  border-radius: 6px;
-  cursor: pointer;
-}
-.completeTask {
-  padding: 8px 12px;
-  border: none;
-  background: #28a745;
-  color: white;
-  border-radius: 6px;
-  cursor: pointer;
-}
+
 @media (max-width: 600px) {
   .task-input-section {
     flex-direction: column;
