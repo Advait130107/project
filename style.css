@@ -27,7 +27,7 @@ body {
 }
 
 .header p {
-  color: #312a2a;
+  color: #666;
 }
 
 .task-input-section {
@@ -37,8 +37,12 @@ body {
 }
 
 .task-input-section input {
-  flex: 2;
+  flex: 1;
   padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
 }
 
 .task-input-section button {
@@ -47,6 +51,8 @@ body {
   background: #007bff;
   color: white;
   border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .filter-section {
@@ -61,24 +67,23 @@ body {
   border: none;
   background: #ddd;
   border-radius: 6px;
+  cursor: pointer;
 }
 
-.filter-btn.active {
-  background: #007bff;
-  color: white;
-}
-.task-list-section {
+.task {
   background: white;
-  padding: 20px;
+  padding: 15px;
+  margin-bottom: 15px;
   border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-#taskList {
-  list-style: none;
+
+.task-buttons {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  gap: 10px;
 }
 
 .stats-section {
@@ -104,4 +109,24 @@ body {
   font-size: 24px;
   font-weight: bold;
   color: #007bff;
+}
+
+@media (max-width: 600px) {
+  .task-input-section {
+    flex-direction: column;
+  }
+
+  .task {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .task-buttons {
+    width: 100%;
+  }
+
+  .task-buttons button {
+    flex: 1;
+  }
 }
